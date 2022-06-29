@@ -25,6 +25,7 @@ public class BlockFactoryScript : MonoBehaviour
     private void SelectEnterMethods(SelectEnterEventArgs arg0)
     {
         if (!arg0.interactableObject.transform.gameObject.Equals(currentBlock)) return;
+        currentBlock.GetComponent<BuildingBlockScript>().takenMethods();
         heldBlock = currentBlock;
         replaceBlock();
     }
@@ -41,7 +42,9 @@ public class BlockFactoryScript : MonoBehaviour
         currentBlock = Instantiate(BuildingBlockPrefab, transform);
         currentRenderer = currentBlock.GetComponent<MeshRenderer>();
         currentBlock.GetComponent<Rigidbody>().isKinematic = true;
-        currentBlock.GetComponent<BuildingBlockScript>().LeftInteractor = LeftInteractor;
+        BuildingBlockScript currentBlockScript = currentBlock.GetComponent<BuildingBlockScript>();
+        currentBlockScript.LeftInteractor = LeftInteractor;
+        currentBlockScript.StartMethods();
     }
     void Update()
     {
