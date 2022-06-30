@@ -577,7 +577,7 @@
                 {
                     "name": "",
                     "id": "9db1d2eb-1bb8-49df-85fa-1ba2b221e7e5",
-                    "path": "*/{PrimaryButton}",
+                    "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -1089,6 +1089,54 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Saving",
+            "id": "37e24467-d6c6-411c-8174-7e03cc3f5903",
+            "actions": [
+                {
+                    "name": "Saving",
+                    "type": "Button",
+                    "id": "a587cce3-5ebb-4483-8d33-10e5355cdac5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Loading",
+                    "type": "Button",
+                    "id": "6c579462-ddd7-4f1b-9546-c789c294e03f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f5ef8323-f7f9-467f-bf0b-106c9ad51d34",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Saving",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06a4d7e7-5437-4b5b-b20a-d1bfb0a48842",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Loading",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

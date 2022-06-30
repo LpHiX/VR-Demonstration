@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-internal class BlockObject
+public class BlockObject
 {
     internal GameObject gameObject;
     internal FixedJoint fixedJoint;
     internal BuildingBlockScript blockScript;
+    internal Color color;
     internal BlockObject(GameObject gameObject)
     {
         this.gameObject = gameObject;
         this.fixedJoint = gameObject.GetComponent<FixedJoint>();
         this.blockScript = gameObject.GetComponent<BuildingBlockScript>();
+        this.color = gameObject.GetComponent<MeshRenderer>().material.color;
     }
 }
 
@@ -30,24 +32,54 @@ internal class GridObject
 
 public class CreationScript : MonoBehaviour
 {
+    public GameObject BuildingBlockPrefab;
     public GameObject GridPrefab;
     public BoxCollider BoxCollider;
     public GameObject GrabAnchor;
 
-    private Dictionary<Vector3Int, BlockObject> containedBlocks = new Dictionary<Vector3Int, BlockObject>();
+    public Dictionary<Vector3Int, BlockObject> containedBlocks = new Dictionary<Vector3Int, BlockObject>();
     private Dictionary<Vector3Int, GridObject> containedGrids = new Dictionary<Vector3Int, GridObject>();
     private Rigidbody creationRigidbody;
-    private bool firstBlockReplaced = false;
+    private Dictionary<Vector3Int, BlockObject> initialBlocks = new Dictionary<Vector3Int, BlockObject>();
 
     public void checkEmpty()
     {
-        Debug.Log(containedBlocks.Count);
         if(containedBlocks.Count == 0)
         {
             Destroy(gameObject);
         }
+        else
+        {
+            updateCollider();
+        }
     }
+    public void LoadCustomCreationMethods(Dictionary<Vector3Int, Color> startingBlocks, XRRayInteractor leftInteractor)
+    {
+        creationRigidbody = GetComponent<Rigidbody>();
+        foreach(KeyValuePair<Vector3Int, Color> entry in startingBlocks)
+        {
+            GameObject newBlock = Instantiate(BuildingBlockPrefab, transform);
+            BuildingBlockScript buildingBlockScript = newBlock.GetComponent<BuildingBlockScript>();
+            buildingBlockScript.LeftInteractor = leftInteractor;
+            buildingBlockScript.StartMethods();
+            buildingBlockScript.parentCreation = gameObject;
+            buildingBlockScript.creationScript = this;
+            newBlock.GetComponent<MeshRenderer>().material.color = entry.Value;
 
+            newBlock.transform.position = transform.TransformPoint(entry.Key);
+            newBlock.transform.localScale = Vector3.one;
+            BlockObject blockObject = new BlockObject(newBlock);
+            containedBlocks.Add(entry.Key, blockObject);
+            initialBlocks.Add(entry.Key, blockObject);
+            blockObject.fixedJoint.connectedBody = creationRigidbody;
+
+        }
+        foreach (KeyValuePair<Vector3Int, BlockObject> entry in initialBlocks)
+        {
+            runAdjacentBlocks(createGrids, entry.Value.gameObject.transform.position, false);
+        }
+        updateCollider();
+    }
     public void awakeMethods(GameObject firstBlockObject)
     {
         creationRigidbody = GetComponent<Rigidbody>();
@@ -80,13 +112,12 @@ public class CreationScript : MonoBehaviour
     {
         Vector3Int position = Vector3Int.RoundToInt(transform.InverseTransformPoint(removedTransform.position));
         containedBlocks.Remove(position);
-        checkEmpty();
         runAdjacentBlocks(removeGrid, removedTransform.position, false);
-        if(!firstBlockReplaced && position == Vector3Int.zero){
+        if(initialBlocks.ContainsKey(position)){
             createGrids(position);
-            firstBlockReplaced = true;
+            initialBlocks.Remove(position);
         }
-        updateCollider();
+        checkEmpty();
     }
 
     private bool removeGrid(Vector3Int position)

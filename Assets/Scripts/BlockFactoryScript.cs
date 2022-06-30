@@ -33,7 +33,6 @@ public class BlockFactoryScript : MonoBehaviour
     private void SelectExitMethods(SelectExitEventArgs arg0)
     {
         if (!arg0.interactableObject.transform.gameObject.Equals(heldBlock)) return;
-        heldBlock.GetComponent<Rigidbody>().isKinematic = false;
         heldBlock = null;
     }
 
@@ -41,7 +40,6 @@ public class BlockFactoryScript : MonoBehaviour
     {
         currentBlock = Instantiate(BuildingBlockPrefab, transform);
         currentRenderer = currentBlock.GetComponent<MeshRenderer>();
-        currentBlock.GetComponent<Rigidbody>().isKinematic = true;
         BuildingBlockScript currentBlockScript = currentBlock.GetComponent<BuildingBlockScript>();
         currentBlockScript.LeftInteractor = LeftInteractor;
         currentBlockScript.StartMethods();

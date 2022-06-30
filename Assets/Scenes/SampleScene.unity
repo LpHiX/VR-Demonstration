@@ -1847,6 +1847,7 @@ Transform:
   - {fileID: 728861334}
   - {fileID: 457103618}
   - {fileID: 1587245845}
+  - {fileID: 647870203}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2462,6 +2463,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4661435515762813124, guid: e289bf5debb17f6459818c207d781953, type: 3}
   m_PrefabInstance: {fileID: 1495902097}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &647870202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 647870203}
+  - component: {fileID: 647870204}
+  m_Layer: 0
+  m_Name: Creation Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &647870203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647870202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 397366002}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647870204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647870202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acedb563846e9d845bf855c72ef07fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreationPrefab: {fileID: 1011630328497235907, guid: ebeb1962a97c58a43920dd36cf93d6fb, type: 3}
+  LoadReference: {fileID: 3790210772303370723, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  SaveReference: {fileID: -8462285581458112792, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  LeftInteractor: {fileID: 1239097573}
+  RightInteractor: {fileID: 19965032}
 --- !u!4 &694676659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 880970725214738984, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
