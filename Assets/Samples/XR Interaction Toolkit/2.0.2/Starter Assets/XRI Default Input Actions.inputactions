@@ -577,7 +577,7 @@
                 {
                     "name": "",
                     "id": "9db1d2eb-1bb8-49df-85fa-1ba2b221e7e5",
-                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "path": "<XRController>{RightHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -1121,7 +1121,7 @@
                 {
                     "name": "",
                     "id": "f5ef8323-f7f9-467f-bf0b-106c9ad51d34",
-                    "path": "<XRController>{RightHand}/primaryButton",
+                    "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1132,7 +1132,7 @@
                 {
                     "name": "",
                     "id": "06a4d7e7-5437-4b5b-b20a-d1bfb0a48842",
-                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

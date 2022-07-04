@@ -38,7 +38,7 @@ public class BlockFactoryScript : MonoBehaviour
 
     private void replaceBlock()
     {
-        currentBlock = Instantiate(BuildingBlockPrefab, transform);
+        currentBlock = Instantiate(BuildingBlockPrefab, transform.position + transform.up * 0.2f, transform.rotation,transform);
         currentRenderer = currentBlock.GetComponent<MeshRenderer>();
         BuildingBlockScript currentBlockScript = currentBlock.GetComponent<BuildingBlockScript>();
         currentBlockScript.LeftInteractor = LeftInteractor;

@@ -57,7 +57,7 @@ public class CreationDataManager : MonoBehaviour
             startingBlocks.Add(loadedCreationData.positions[i], loadedCreationData.colors[i]);
         }
 
-        GameObject creationObject = Instantiate(CreationPrefab, RightInteractor.transform.position + RightInteractor.transform.forward * 5, RightInteractor.transform.rotation);
+        GameObject creationObject = Instantiate(CreationPrefab, RightInteractor.transform.position + RightInteractor.transform.forward * 2, RightInteractor.transform.rotation);
         creationObject.GetComponent<CreationScript>().LoadCustomCreationMethods(startingBlocks, LeftInteractor);
     }
 }
