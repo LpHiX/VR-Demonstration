@@ -7,16 +7,27 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CreationDataManager : MonoBehaviour
 {
+    [System.Serializable]
+    private class BlockData
+    {
+        public Vector3Int position;
+        public Color color;
+
+        public BlockData(Vector3Int position, Color color)
+        {
+            this.position = position;
+            this.color = color;
+        }
+    }
+    [System.Serializable]
     private class CreationData
     {
-        public List<Vector3Int> positions = new List<Vector3Int>();
-        public List<Color> colors = new List<Color>();
+        public List<BlockData> blocks = new List<BlockData>();
         internal CreationData(Dictionary<Vector3Int, BlockObject> dictionary)
         {
             foreach (KeyValuePair<Vector3Int, BlockObject> entry in dictionary)
             {
-                positions.Add(entry.Key);
-                colors.Add(entry.Value.color);
+                blocks.Add(new BlockData(entry.Key, entry.Value.color));
             }
         }
     }
@@ -40,24 +51,25 @@ public class CreationDataManager : MonoBehaviour
         }
         CreationScript creationScript = RightInteractor.interactablesSelected[0].transform.gameObject.GetComponent<CreationScript>();
         CreationData creationData = new CreationData(creationScript.containedBlocks);
-        string json = JsonUtility.ToJson(creationData);
+        string json = JsonUtility.ToJson(creationData, true);
         File.WriteAllText(Application.dataPath + "/debugFile.json", json);
-        Debug.Log("Saved creation with "+ creationScript.containedBlocks.Count + "blocks");
+        //Debug.Log("Saved creation with "+ creationScript.containedBlocks.Count + "blocks");
     }
 
     private void loadMethod(InputAction.CallbackContext obj)
     {
         string json = File.ReadAllText(Application.dataPath + "/debugFile.json");
         CreationData loadedCreationData = JsonUtility.FromJson<CreationData>(json);
-        Debug.Log("Loading creation with " + loadedCreationData.positions.Count + " blocks");
+        //Debug.Log("Loading creation with " + loadedCreationData.blocks.Count + " blocks");
 
         Dictionary<Vector3Int, Color> startingBlocks = new Dictionary<Vector3Int, Color>();
-        for (int i = 0; i < loadedCreationData.positions.Count; i++)
+        for (int i = 0; i < loadedCreationData.blocks.Count; i++)
         {
-            startingBlocks.Add(loadedCreationData.positions[i], loadedCreationData.colors[i]);
+            startingBlocks.Add(loadedCreationData.blocks[i].position, loadedCreationData.blocks[i].color);
         }
 
         GameObject creationObject = Instantiate(CreationPrefab, RightInteractor.transform.position + RightInteractor.transform.forward * 2, RightInteractor.transform.rotation);
         creationObject.GetComponent<CreationScript>().LoadCustomCreationMethods(startingBlocks, LeftInteractor);
+        
     }
 }

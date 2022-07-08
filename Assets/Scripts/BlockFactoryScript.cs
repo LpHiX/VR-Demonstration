@@ -47,9 +47,9 @@ public class BlockFactoryScript : MonoBehaviour
     void Update()
     {
         currentRenderer.material.color = new Color(
-            RedSlider.transform.localPosition.z * 4 + 0.5f,
-            GreenSlider.transform.localPosition.z * 4 + 0.5f,
-            BlueSlider.transform.localPosition.z * 4 + 0.5f
+            transform.InverseTransformPoint(RedSlider.transform.position).x * 4 + 0.5f,
+            transform.InverseTransformPoint(GreenSlider.transform.position).x * 4 + 0.5f,
+            transform.InverseTransformPoint(BlueSlider.transform.position).x * 4 + 0.5f
             );
     }
 }
