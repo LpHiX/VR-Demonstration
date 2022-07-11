@@ -1106,7 +1106,7 @@
             ]
         },
         {
-            "name": "Saving",
+            "name": "Custom Inputs",
             "id": "37e24467-d6c6-411c-8174-7e03cc3f5903",
             "actions": [
                 {
@@ -1122,6 +1122,15 @@
                     "name": "Loading",
                     "type": "Button",
                     "id": "6c579462-ddd7-4f1b-9546-c789c294e03f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "a607f9a1-589b-4471-b7af-e03eb46972d2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -1148,6 +1157,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Loading",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7968308f-86d4-4f01-8d4a-0c2df5381aec",
+                    "path": "<XRController>/menu",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

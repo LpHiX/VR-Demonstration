@@ -5,30 +5,30 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class WirstMenuScript : MonoBehaviour
+public class WristMenuScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject wristUI;
     private bool wristIsActive = true;
+    [SerializeField]
+    private InputActionReference MenuInputReference;
     
     void Start()
     {
         ToggleWristUI();
+        MenuInputReference.action.started += MenuPressed;
     }
     public void MenuPressed(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            ToggleWristUI();
-        }
+        ToggleWristUI();
     }
     public void ReturnHome()
     {
         SceneManager.LoadScene("HomeScene");
     }
-    public void DebugMessage()
+    public void CloseMenu()
     {
-        Debug.Log("test");
+        ToggleWristUI();
     }
 
     private void ToggleWristUI()

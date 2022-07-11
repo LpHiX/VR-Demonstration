@@ -104,7 +104,7 @@ namespace xsens
         /// <summary>
         /// Raises the application quit event.
         /// </summary>
-        void OnApplicationQuit()
+        void OnDestroy()
         {
             try
             {
