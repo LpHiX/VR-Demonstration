@@ -52,6 +52,7 @@ public class CreationDataManager : MonoBehaviour
         CreationScript creationScript = RightInteractor.interactablesSelected[0].transform.gameObject.GetComponent<CreationScript>();
         CreationData creationData = new CreationData(creationScript.containedBlocks);
         string json = JsonUtility.ToJson(creationData, true);
+        Debug.Log(JsonUtility.ToJson(creationData));
         File.WriteAllText(Application.dataPath + "/debugFile.json", json);
         //Debug.Log("Saved creation with "+ creationScript.containedBlocks.Count + "blocks");
     }
@@ -71,5 +72,20 @@ public class CreationDataManager : MonoBehaviour
         GameObject creationObject = Instantiate(CreationPrefab, RightInteractor.transform.position + RightInteractor.transform.forward * 2, RightInteractor.transform.rotation);
         creationObject.GetComponent<CreationScript>().LoadCustomCreationMethods(startingBlocks, LeftInteractor);
         
+    }
+
+    public void loadToScene(string creationJson, Transform parentEmpty)
+    { 
+        CreationData loadedCreationData = JsonUtility.FromJson<CreationData>(creationJson);
+        //Debug.Log("Loading creation with " + loadedCreationData.blocks.Count + " blocks");
+
+        Dictionary<Vector3Int, Color> startingBlocks = new Dictionary<Vector3Int, Color>();
+        for (int i = 0; i < loadedCreationData.blocks.Count; i++)
+        {
+            startingBlocks.Add(loadedCreationData.blocks[i].position, loadedCreationData.blocks[i].color);
+        }
+
+        GameObject creationObject = Instantiate(CreationPrefab, parentEmpty);
+        creationObject.GetComponent<CreationScript>().LoadCustomCreationMethods(startingBlocks, LeftInteractor);
     }
 }

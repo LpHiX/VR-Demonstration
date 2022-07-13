@@ -69,12 +69,12 @@ public class BuildingBlockScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.GetComponent<GridScript>()) return;
+        if (!other.GetComponent<XRSocketInteractor>()) return;
         withinSocket = false;
     }
     private void OnTriggerStay(Collider other)
     {
-        if (!other.GetComponent<GridScript>()) return;
+        if (!other.GetComponent<XRSocketInteractor>()) return;
         withinSocket = true;
     }
 }

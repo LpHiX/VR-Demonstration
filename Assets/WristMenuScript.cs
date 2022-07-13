@@ -9,13 +9,12 @@ public class WristMenuScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject wristUI;
-    private bool wristIsActive = true;
+    private bool wristIsActive = false;
     [SerializeField]
     private InputActionReference MenuInputReference;
     
     void Start()
     {
-        ToggleWristUI();
         MenuInputReference.action.started += MenuPressed;
     }
     public void MenuPressed(InputAction.CallbackContext context)
