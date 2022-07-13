@@ -2993,7 +2993,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc04a7a47180ba41b16587fbb97dc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Message: Testing
+  Message: Earth's Moon is the only place beyond Earth where humans have set foot,
+    so far. The Moon makes our planet more livable by moderating how much it wobbles
+    on its axis.
 --- !u!114 &891863676
 MonoBehaviour:
   m_ObjectHideFlags: 0
