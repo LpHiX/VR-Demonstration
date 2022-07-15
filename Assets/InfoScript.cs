@@ -6,8 +6,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class InfoScript : MonoBehaviour
 {
-    public string Message;
     [SerializeField]
+    private string Message;
+    [SerializeField]
+    private string Name;
     public void Awake()
     {
         XRBaseInteractable interactable = GetComponent<XRBaseInteractable>();
@@ -21,12 +23,10 @@ public class InfoScript : MonoBehaviour
         if (InfoManager._instance.planetTransform == transform)
         {
             InfoManager._instance.HideInfoBox();
-            Debug.Log("Hiding");
         }
         else
         {
-            InfoManager._instance.SetInfoBox(Message, transform);
-            Debug.Log("Showing");
+            InfoManager._instance.SetInfoBox(Name, Message, transform);
         }
     }
 

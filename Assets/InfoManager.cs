@@ -7,13 +7,16 @@ public class InfoManager : MonoBehaviour
 {
     public static InfoManager _instance;
     public TextMeshProUGUI TextComponent;
+    public TextMeshProUGUI NameComponent;
     public GameObject TextPanel;
     public GameObject SelectCanvas;
+    public GameObject NameCanvas;
     public Transform cameraTransform;
 
     public Transform planetTransform;
     private Transform selectTransform;
     private RectTransform infoTransform;
+    private RectTransform nameTransform;
     private void Awake()
     {
         if(_instance != null && _instance != this)
@@ -24,13 +27,12 @@ public class InfoManager : MonoBehaviour
         {
             _instance = this;
         }
-        this.infoTransform = TextPanel.GetComponent<RectTransform>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+        infoTransform = TextPanel.GetComponent<RectTransform>();
+        nameTransform = NameCanvas.GetComponent<RectTransform>();
+
         TextPanel.SetActive(false);
         SelectCanvas.SetActive(false);
+        NameCanvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,7 +43,12 @@ public class InfoManager : MonoBehaviour
             TextPanel.transform.position = planetTransform.position;
             TextPanel.transform.rotation = Quaternion.LookRotation(planetTransform.position - cameraTransform.position, Vector3.up);
             TextPanel.transform.localScale = 0.003f * Vector3.one * Vector3.Distance(planetTransform.position, cameraTransform.position) * Mathf.Tan(Mathf.Deg2Rad * 60f * 0.5f);
-            infoTransform.pivot = new Vector2(-10 * Mathf.Sqrt(selectTransform.localScale.x) / Vector3.Distance(planetTransform.position, cameraTransform.position), 0.5f);
+            infoTransform.pivot = new Vector2(-10 * Mathf.Sqrt(planetTransform.localScale.x) / Vector3.Distance(planetTransform.position, cameraTransform.position), 0.5f);
+
+            NameCanvas.transform.position = planetTransform.position; 
+            NameCanvas.transform.rotation = Quaternion.LookRotation(planetTransform.position - cameraTransform.position, Vector3.up);
+            NameCanvas.transform.localScale = 0.003f * Vector3.one * Vector3.Distance(planetTransform.position, cameraTransform.position) * Mathf.Tan(Mathf.Deg2Rad * 60f * 0.5f);
+            nameTransform.pivot = new Vector2(-10 * Mathf.Sqrt(planetTransform.localScale.x) / Vector3.Distance(planetTransform.position, cameraTransform.position), -0.2f);
         }
         if (SelectCanvas.activeSelf)
         {
@@ -50,12 +57,15 @@ public class InfoManager : MonoBehaviour
             SelectCanvas.transform.localScale = 0.001f * Mathf.Sqrt(selectTransform.localScale.x)  * Vector3.one * Vector3.Distance(selectTransform.position, cameraTransform.position) * Mathf.Tan(Mathf.Deg2Rad * 60f * 0.5f);
         }
     }
-    public void SetInfoBox(string Message, Transform planetTransform)
+    public void SetInfoBox(string Name, string Message, Transform planetTransform)
     {
         this.planetTransform = planetTransform;
 
         TextPanel.SetActive(true);
         TextComponent.text = Message;
+
+        NameCanvas.SetActive(true);
+        NameComponent.text = Name;
     }
     public void HideInfoBox()
     {
@@ -63,6 +73,9 @@ public class InfoManager : MonoBehaviour
 
         TextPanel.SetActive(false);
         TextComponent.text = string.Empty;
+
+        NameCanvas.SetActive(false);
+        NameComponent.text = string.Empty;
     }
     public void ShowSelector(Transform selectTransform)
     {

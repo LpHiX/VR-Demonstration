@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3a567d595dce48241969f3aa3cccfc71, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -306,7 +306,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -955,13 +955,134 @@ RectTransform:
   m_Children:
   - {fileID: 1288534557}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &117721197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117721202}
+  - component: {fileID: 117721201}
+  - component: {fileID: 117721200}
+  - component: {fileID: 117721199}
+  - component: {fileID: 117721198}
+  m_Layer: 5
+  m_Name: NameCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &117721198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117721197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
+--- !u!114 &117721199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117721197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &117721200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117721197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &117721201
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117721197}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 24575994}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &117721202
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117721197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 242618330}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: -0.5, y: -0.2}
 --- !u!1001 &145260095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1032,6 +1153,10 @@ PrefabInstance:
     - target: {fileID: 4693579709242440, guid: f9a741bb8762344c6a2a9cb4217ef728, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205066459857805224, guid: f9a741bb8762344c6a2a9cb4217ef728, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a741bb8762344c6a2a9cb4217ef728, type: 3}
@@ -1346,6 +1471,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205182777401487052, guid: b4201d402613a4464b35c805dafcca62, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4201d402613a4464b35c805dafcca62, type: 3}
 --- !u!4 &231558081 stripped
@@ -1373,6 +1502,7 @@ MonoBehaviour:
   Message: Adorned with a dazzling, complex system of icy rings, Saturn is unique
     in our solar system. The other giant planets have rings, but none are as spectacular
     as Saturn's.
+  Name: Saturn
 --- !u!114 &231558084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1583,6 +1713,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4921127262728976, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
   m_PrefabInstance: {fileID: 2106130353}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &242618329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242618330}
+  - component: {fileID: 242618332}
+  - component: {fileID: 242618331}
+  m_Layer: 5
+  m_Name: InfoBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &242618330
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242618329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1509949974}
+  m_Father: {fileID: 117721202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 30}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &242618331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242618329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.89411765}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &242618332
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242618329}
+  m_CullTransparentMesh: 1
 --- !u!1001 &425839361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1646,6 +1853,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -892767558768151431, guid: 380329e0e26350749957b21b9f1a89df, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 380329e0e26350749957b21b9f1a89df, type: 3}
       propertyPath: m_Name
       value: roblox_Model_mayaRig
@@ -1693,6 +1904,11 @@ MonoBehaviour:
   prop4:
     type: 0
     segment: 0
+--- !u!4 &425839365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6239020075281826895, guid: 380329e0e26350749957b21b9f1a89df, type: 3}
+  m_PrefabInstance: {fileID: 425839361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &435969868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1764,6 +1980,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205720317299591224, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
+      propertyPath: m_Size
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 205720317299591224, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 205720317299591224, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 0.00000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 205720317299591224, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
 --- !u!4 &435969869 stripped
@@ -1791,6 +2023,7 @@ MonoBehaviour:
   Message: Venus spins slowly in the opposite direction from most planets. A thick
     atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet
     in our solar system.
+  Name: Venus
 --- !u!114 &435969872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2033,6 +2266,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205528198418929460, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
+      propertyPath: m_Size
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 205528198418929460, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 205528198418929460, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 0.00000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 205528198418929460, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
 --- !u!4 &436281700 stripped
@@ -2060,6 +2309,7 @@ MonoBehaviour:
   Message: "Mars is a dusty, cold, desert world with a very thin atmosphere. There
     is strong evidence Mars was\u2014billions of years ago\u2014wetter and warmer,
     with a thicker atmosphere."
+  Name: Mars
 --- !u!114 &436281703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2773,9 +3023,91 @@ Transform:
   - {fileID: 1081154942}
   - {fileID: 1666157088}
   - {fileID: 1277910622}
+  - {fileID: 1518023273}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &656264430
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 425839365}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.131
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6366141
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7711308
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.007633728
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.004646106
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -100.919
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.77301025
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.7720032
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bb83716b97cc0a64ab1ddbf3e4488507, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -6203084660870543204, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+    - target: {fileID: 919132149155446097, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
+      propertyPath: m_Name
+      value: Helmet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12b873944c96a5e45b0ddeecfbc6c02e, type: 3}
 --- !u!1 &704644820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,6 +3328,7 @@ MonoBehaviour:
   Message: Earth's Moon is the only place beyond Earth where humans have set foot,
     so far. The Moon makes our planet more livable by moderating how much it wobbles
     on its axis.
+  Name: Moon
 --- !u!114 &891863676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3145,6 +3478,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205751706758944436, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: m_Size
+      value: 2.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 205751706758944436, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 205751706758944436, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 0.0000005364418
+      objectReference: {fileID: 0}
+    - target: {fileID: 205751706758944436, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
 --- !u!4 &907683532 stripped
@@ -3172,6 +3521,7 @@ MonoBehaviour:
   Message: Jupiter is more than twice as massive than the other planets of our solar
     system combined. The giant planet's Great Red spot is a centuries-old storm bigger
     than Earth.
+  Name: Jupiter
 --- !u!114 &907683535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3447,7 +3797,7 @@ Transform:
   - {fileID: 1954702140}
   - {fileID: 1128460770}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1081154939
 GameObject:
@@ -3622,8 +3972,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PLUTO\t\r\nMass (10E24kg): 0.013\t\r\nDiameter (km): 2376\t\r\nOrbit Period
-    (Days): 90,560"
+  m_text: ERROR INFO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3650,13 +3999,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.3
+  m_fontSize: 22.15
   m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 3
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4118,6 +4467,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205004119987537650, guid: c91342f6e3afc48fd958056404ead345, type: 3}
+      propertyPath: m_Size
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 205004119987537650, guid: c91342f6e3afc48fd958056404ead345, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 205004119987537650, guid: c91342f6e3afc48fd958056404ead345, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 0.00000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 205004119987537650, guid: c91342f6e3afc48fd958056404ead345, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c91342f6e3afc48fd958056404ead345, type: 3}
 --- !u!4 &1155150558 stripped
@@ -4145,6 +4510,7 @@ MonoBehaviour:
   Message: "Uranus\u2014seventh planet from the Sun\u2014rotates at a nearly 90-degree
     angle from the plane of its orbit. This unique tilt makes Uranus appear to spin
     on its side."
+  Name: Uranus
 --- !u!114 &1155150561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4539,7 +4905,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Intensity: 200
   m_Range: 10000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4887,11 +5253,11 @@ RectTransform:
   m_Father: {fileID: 1875382011}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 0.000000016763806}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1504688313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4905,7 +5271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.89411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4961,6 +5327,190 @@ Transform:
   m_Father: {fileID: 907683532}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1509949973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509949974}
+  - component: {fileID: 1509949976}
+  - component: {fileID: 1509949975}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1509949974
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509949973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 242618330}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1509949975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509949973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: ERROR NAME
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 8.95
+  m_fontSizeBase: 10
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 3
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1509949976
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509949973}
+  m_CullTransparentMesh: 1
+--- !u!1 &1518023272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518023273}
+  - component: {fileID: 1518023274}
+  m_Layer: 0
+  m_Name: Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1518023273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518023272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 638337384}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1518023274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518023272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: ca1f5ed9be14b5445adb785b61d56108, type: 2}
 --- !u!1 &1666157085
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,6 +5697,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205193830370473872, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
+      propertyPath: m_Size
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 205193830370473872, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 205193830370473872, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 0.00000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 205193830370473872, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
 --- !u!4 &1667886044 stripped
@@ -5174,6 +5740,7 @@ MonoBehaviour:
   Message: "Neptune\u2014the eighth and most distant major planet orbiting our Sun\u2014is
     dark, cold and whipped by supersonic winds. It was the first planet located through
     mathematical calculations, rather than by telescope."
+  Name: Neptune
 --- !u!114 &1667886047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5459,11 +6026,11 @@ RectTransform:
   m_Children:
   - {fileID: 1504688312}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.49999934, y: 0.50000006}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: -0.5, y: 0.5}
 --- !u!1001 &1876735905
@@ -5537,6 +6104,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205527854345052348, guid: ab152f61198d54532ae39108e616ff59, type: 3}
+      propertyPath: m_Size
+      value: 2.0000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 205527854345052348, guid: ab152f61198d54532ae39108e616ff59, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 205527854345052348, guid: ab152f61198d54532ae39108e616ff59, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 0.00000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 205527854345052348, guid: ab152f61198d54532ae39108e616ff59, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab152f61198d54532ae39108e616ff59, type: 3}
 --- !u!4 &1876735906 stripped
@@ -5564,6 +6147,7 @@ MonoBehaviour:
   Message: "Mercury\u2014the smallest planet in our solar system and closest to the
     Sun\u2014is only slightly larger than Earth's Moon. Mercury is the fastest planet,
     zipping around the Sun every 88 Earth days."
+  Name: Mercury
 --- !u!114 &1876735909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5746,6 +6330,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun Sphere
       objectReference: {fileID: 0}
+    - target: {fileID: 1066320961419670, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708399313684614, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938299927493944, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5902,6 +6498,7 @@ MonoBehaviour:
   Message: The Sun is a yellow dwarf star, a hot ball of glowing gases at the heart
     of our solar system. Its gravity holds everything from the biggest planets to
     tiny debris in its orbit.
+  Name: Sun
 --- !u!1 &1887916373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5957,8 +6554,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextComponent: {fileID: 1085843200}
+  NameComponent: {fileID: 1509949975}
   TextPanel: {fileID: 1875382006}
   SelectCanvas: {fileID: 88342406}
+  NameCanvas: {fileID: 117721197}
   cameraTransform: {fileID: 24575995}
   planetTransform: {fileID: 0}
 --- !u!1 &1907849394
@@ -6367,6 +6966,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 205659358378571548, guid: baebbc833ecda42dd8a75966c9f62420, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baebbc833ecda42dd8a75966c9f62420, type: 3}
 --- !u!4 &1991271179 stripped
@@ -6394,6 +6997,7 @@ MonoBehaviour:
   Message: Pluto is a complex world of ice mountains and frozen plains. Once considered
     the ninth planet, Pluto is the largest member of the Kuiper Belt and the best
     known of a new class of worlds called dwarf planets.
+  Name: Pluto
 --- !u!114 &1991271182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6735,6 +7339,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 205568318585521926, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
+      propertyPath: m_Size
+      value: 2.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 205568318585521926, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
+      propertyPath: m_LocalReferencePoint.x
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 205568318585521926, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
+      propertyPath: m_LocalReferencePoint.z
+      value: 0.00000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 205568318585521926, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
 --- !u!4 &2106130354 stripped
@@ -6762,6 +7382,7 @@ MonoBehaviour:
   Message: "Earth\u2014our home planet\u2014is the only place we know of so far that\u2019s
     inhabited by living things. It's also the only planet in our solar system with
     liquid water on the surface."
+  Name: Earth
 --- !u!114 &2106130357
 MonoBehaviour:
   m_ObjectHideFlags: 0
